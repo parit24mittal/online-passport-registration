@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <style type="text/css">
+         
+input,select 
+{
+    border-radius:10px;
+    background-color:coral;
+}
+   
+            
+            
+        </style>
+        <script type="text/javascript">
+function validateForm()
+{
+if( document.myform.username.value=="" )
+   {
+     alert( "Please provide your user name!" );
+     document.myform.username.focus() ;
+     return false;
+   }
+ if( document.myform.password.value=="" )
+   {
+     alert( "Please enter your password!" );
+     document.myform.password.focus() ;
+     return false;
+   }
+}  
+        </script>
+    </head>
+<body style="background-color:burlywood">
+<h1 style="text-align:center">welcome to online passport registration!!!!</h1>
+<img src="mid.jpg" height="250px" width="1350px"/>
+<h2 style="text-align:center">welcome to user login!!!</h2>
+<form   name="myform" style="text-align:center" action="userlogin.php"  onsubmit="return validateForm()" method="post">
+Enter UserName:<input type="text" name="username" pattern="^[A-Za-z0-9]{1,10}$" title="enter user name of max length 10 using digits and alphabets only"/>
+
+Enter Password:<input type="password" name="password" pattern="^[A-Za-z0-9]{1,10}$" />
+
+<input type="submit" value="submit"/>
+<br>
+</form>
+        <center>
+new user:<a 
+style="color:brown" href="newuserregis.html"><b>clickhere!!!</b></a>
+        </center>
+<footer>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="text-align:center;font-size:15px">
+<img src="emblom.jpg" a align="center" width="60" height="50" />
+<br>
+<b>Note:site maintained and designed by ministry of external affairs gov of india.</b>
+</footer>
+</body>
+</html>
