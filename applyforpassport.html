@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+table,th,tr
+{
+border:3px solid chocolate;
+ border-radius:10px;
+}
+input,select 
+{
+    border-radius:10px;
+    background-color:coral;
+}
+
+
+</style>
+<script type="text/javascript">
+
+function validateForm()
+{
+if( document.myForm.fname.value=="" )
+   {
+     alert( "Please provide your name!" );
+     document.myForm.fname.focus() ;
+     return false;
+   }
+ if( document.myForm.surname.value=="" )
+   {
+     alert( "Please provide your  surname!" );
+     document.myForm.fname.focus() ;
+     return false;
+   }
+   
+
+ if( document.myForm.mothersname.value=="" )
+   {
+     alert( "Please provide your mothersname!" );
+     document.myForm.fname.focus() ;
+     return false;
+   }
+
+ if( document.myForm.fathersname.value=="" )
+   {
+     alert( "Please provide your fathersname!" );
+     document.myForm.fname.focus() ;
+     return false;
+   }
+
+   if(document.myForm.age.value == "" ||document.myForm.age.value.length==3 )
+   {
+     alert( "Please provide a valid age" );
+     document.myForm.age.focus() ;
+     return false;
+   }
+ if(document.myForm.pob.value == "" )
+   {
+     alert( "Please provide your place of birth" );
+     return false;
+   }
+ if(document.myForm.dob.value == "" )
+   {
+     alert( "Please provide your date of birth" );
+     return false;
+   }
+
+   if(document.myForm.nationality.value == "-1" )
+   {
+     alert( "Please provide your nationality" );
+     return false;
+   }
+
+if( document.myForm.permanentaddress.value=="" )
+   {
+     alert( "Please enter permanent address" );
+     return false;
+   }
+if( document.myForm.office.value=="-1" )
+   {
+     alert( "Please enter regional passport office" );
+     return false;
+   }
+ 
+
+}
+
+
+</script>
+</head>
+<body style="background-color:burlywood">
+<h1 style="text-align:center">welcome to online passport registration!!!!</h1>
+<img src="mid.jpg" height="250px" width="1350px"/>
+<h2 style="text-align:center"><marquee>welcome to online registration!!!!</marquee></h2>
+<p style="text-align:right">
+<a style="color:brown" href="userhomepage.html"><b>RETURN TO HOME PAGE</b></a>
+</p>
+<center>
+<table>
+<form name="myForm" style="text-align:left;font-size:15px" action="applyforpassport.php"  onsubmit="return validateForm()" method="POST">
+<tr>
+<th>Enter Name:</th>
+<th><input type="text"name="fname" pattern="^[A-Za-z]{2,50}$" title="enter valid name" /></th>
+</tr>
+<tr>
+<th>Enter SurName:</th>
+<th><input type="text" name="surname"  pattern="^[A-Za-z]{2,50}$" title="enter valid name" /></th>
+</tr>
+<tr>
+<th>Enter Father'sName:</th>
+<th><input type="text"name="fathersname"    pattern="^[A-Za-z]{2,50}$" title="enter valid name" /></th>
+</tr>
+<tr>
+<th>Enter Mother'sName:</th>
+<th><input type="text"name="mothersname" pattern="^[A-Za-z]{2,50}$" title="enter valid name" /></th>
+</tr>
+<tr>
+<th>Enter age:</th>
+<th><input type="text"name="age"   pattern="^[0-9]{1,2}$" title="enter 2 digit valid age" /></th>
+</tr>
+<tr>
+<th>placeofbirth</th>
+<th><input type="text"name="pob"  pattern="^[A-Za-z]{2,50}$" title="enter valid name" /></th>
+</tr>
+<tr>
+<th>Date of birth:</th>
+<th><input type="text" name="dob"></th>
+</tr>
+<tr>
+<th>Sex:</th>
+<th><input type="radio"  name="sex" value="true" /> Male
+<input type="radio"  name="sex" value="female" /> Female</th>
+</tr>
+<tr>
+<th>Nationality:</th>
+<th><select name="nationality" >
+<option value="-1">choose</option>
+<option value="indian">indian</option>
+  <option value="russian">russian</option>
+  <option value="japanese">japanese</option>
+  <option value="chinese">chinese</option>
+</select></th>
+</tr>
+<tr>
+<th>permanentaddress:</th>
+<th><input type="text"name="permanentaddress" pattern="^[A-Za-z0-9]{2,50}$" title="enter valid address"></th>
+</tr>
+<tr>
+<th>Regionalpassportoffice</th>
+<th><select name="office" >
+<option value="-1">choose</option>
+<option value="ghaziabad">ghaziabad</option>
+  <option value="delhi">delhi</option>
+  <option value="chennai">chennai</option>
+  <option value="bangalore">bangalore</option>
+</select></th>
+</tr>
+<tr>
+<th>upload recent photograph:</th>
+<th>
+  <input type="file" name="pic" accept="image/*" /></th>
+</tr>
+<tr>
+<th>click on submit</th>
+<th>
+<input type="submit" value="submit" ></th>
+
+</tr>
+
+</form>
+</table>
+</center>
+
+<footer>
+<p style="text-align:center;font-size:15px">
+<img src="emblom.jpg" align="center" width="60" height="50" />
+<br>
+<b>Note:site maintained and designed by ministry of external affairs gov of india.</b></p>
+</footer>
+</body>
+</html>
